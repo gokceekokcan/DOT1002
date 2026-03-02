@@ -1,0 +1,15 @@
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\bin\Debug\net10.0\CodingProject.exe
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\bin\Debug\net10.0\CodingProject.deps.json
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\bin\Debug\net10.0\CodingProject.runtimeconfig.json
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\bin\Debug\net10.0\CodingProject.dll
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\bin\Debug\net10.0\CodingProject.pdb
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.AssemblyInfoInputs.cache
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.AssemblyInfo.cs
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.csproj.CoreCompileInputs.cache
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.sourcelink.json
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.dll
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\refint\CodingProject.dll
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.pdb
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\CodingProject.genruntimeconfig.cache
+C:\Users\Gokce\Documents\GitHub\DOT1002\CodingProject\obj\Debug\net10.0\ref\CodingProject.dll
