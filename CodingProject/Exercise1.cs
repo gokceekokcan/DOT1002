@@ -43,4 +43,6 @@ public class Exercise1
         Console.WriteLine($"Answer Is {result}");
 
     }
+
+
 }
