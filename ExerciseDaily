@@ -99,6 +99,92 @@ public class Cafe
         Console.WriteLine($"TOTAL TICKET EARNING {TotalTicketSale} TL");
         Console.WriteLine($"TOTAL EARNING WITH DONATIONS {TotalGeneral} TL");
     }
+
+    public OxygenCheck()
+    {
+        Console.WriteLine($"Whats your Oxygen Percentage? 0-100 ");
+        int OxygenPercentage = Convert.ToInt32(Console.ReadLine());
+
+        if(OxygenPercentage < 20)
+        {
+            Console.WriteLine($"Danger! Get out of the water!");
+        }
+        
+        else if(OxygenPercentage < 50)
+        {
+            Console.WriteLine($"Oxygen is getting lower, get ready");
+        }
+       
+        else 
+        {
+        Console.WriteLine($"Oxygen Level is safe");
+        }
+
+    }
+
+    public GradeSystem()
+    {
+        Console.WriteLine($"Write the age of this art piece");
+        int PieceAge = Convert.ToInt32(Console.ReadLine());
+
+        if(PieceAge > 1000)
+        {
+            Console.WriteLine($"This piece is an epic historical art piece!");
+        }
+
+        else if(PieceAge > 500)
+        {
+            Console.WriteLine($"This is a very import art piece");
+        }
+
+        else
+        {
+            Console.WriteLine($"This art piece is very close to our era");
+        }
+    }
+
+    public void EntryCheck()
+    {
+        Console.WriteLine("How old are you?");
+        int GuestAge = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Are you a student?");
+        bool StudentCheck = Convert.ToBoolean(Console.ReadLine());
+
+        if(GuestAge < 18 || StudentCheck == true)
+        {
+            Console.WriteLine($"You have earned student discount by: 50 TL");
+        }
+
+        else
+        {
+            Console.WriteLine("You cannot earned student discount 100 TL");
+        }
+    }
+
+
+    public void EcoLock()
+    {
+        Console.WriteLine($"Enter your intelligence age 0-100");
+        int IntellegenceAge = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine($"Do you have enough key?");
+        bool KeyAmount = Convert.ToBoolean(Console.ReadLine());
+
+        Console.WriteLine($"What is your energy level? 0.0-1.0");
+        double EnergyLevel = Convert.ToDouble(Console.ReadLine());
+
+        if(IntellegenceAge > 70 && KeyAmount == true && EnergyLevel > 0.5 )
+        {
+            Console.WriteLine("Secret Area has unlocked! Welcome to the EcoMind!");
+        }
+
+        else
+        {
+            Console.WriteLine("You have to work more! Conditions not enough");
+        }
+
+    }
 }
 
 
