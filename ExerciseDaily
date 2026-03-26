@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+using System.Data;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 
@@ -185,7 +187,104 @@ public class Cafe
         }
 
     }
+
+    using System;
+    using System.Collections.Generic;
+
+    public class MindScore
+    {
+       public void ManageScore()
+       {
+        List<int> MindScores = new List<int>();
+
+        Console.WriteLine("Enter first players score: ");
+        int FirstScore = Convert.ToInt32(Console.ReadLine());
+        MindScores.Add(FirstScore);
+
+        Console.WriteLine("Enter second players score: ");
+        int SecondScore = Convert.ToInt32(Console.ReadLine());
+        MindScores.Add(SecondScore); 
+
+        if(MindScores[0] > MindScores[1])
+        {
+            Console.WriteLine($"First Player is better today!");
+        }
+
+        else
+        {
+            Console.WriteLine($"Second Player got the lead!");
+        }
+
+        Console.WriteLine($" In total there are {MindScore.Count} registiration");
+
+       } 
+    }
+
+    public class DiveLocation
+    {
+        public void ShowLocations()
+        {
+            string[] locations = new string[3];
+            locations[0] = "Bitez";
+            locations[1] = "Akvaryum";
+            locations[2] = "Orak";
+
+            Console.WriteLine($"{locations[2]}");
+        }
+
+    }
+
+    using System;
+    using System.Collections.Generic;
+    public class ShoppingList
+    {
+        public void Orders()
+        {
+
+        List<string> Orders = new List<string>();
+        Console.WriteLine("What is your order?");
+        Orders.Add(Console.ReadLine());
+
+        Console.WriteLine("What is your second order?");
+        Orders.Add(Console.ReadLine());
+
+        Console.WriteLine($"You have {Orders.Count} count orders");
+
+        }
+    }
+
+    public class Inventory
+    {
+        public void ShowInventory()
+        {
+            string[] storage = new string[2];
+
+            storage[0] = "Map";
+            storage[1] = "Compass";
+
+            storage[1] = "Lightning";
+
+            Console.WriteLine($"{storage[1]}");
+
+        }
+    }
+
+        public void Numbers
+        {
+            Console.WriteLine(" Write First number: ");
+            int firstnumber = Convert.ToInt32(Console.ReadLine());
+
+            
+
+
+         
+            
+            
+        }
+   
+
 }
+
 
 
 
