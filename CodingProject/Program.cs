@@ -1,5 +1,10 @@
-﻿static void Main(string[] args)
+﻿using System;
+
+class Program  
 {
-    ResourceManager manager = new ResourceManager();
-    manager.UpdateResource("Gold", 100);
+    static void Main(string[] args)
+    {
+        Exercise1.PrintOperationResult();
+    }
 }
+
