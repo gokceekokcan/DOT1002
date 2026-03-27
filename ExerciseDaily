@@ -1,288 +1,262 @@
-using System.ComponentModel.Design;
-using System.Data;
-using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
+using System;
+using System.Collections.Generic;
+
 
 public class ExerciseDaily
 {
-    public Text goldText;
-    public Text crystalText;
-    public Text foodText;
-    
-    public void UpdateResource(Text resourceText, int amount) 
     {
-        resourceText.text = "Amount: " + amount.ToString();
-    }
-
-    public void UpdateAll()
-    {
+        public Text goldText;
+        public Text crystalText;
+        public Text foodText;
         
-    }
-}
+        public void UpdateResource(Text resourceText, int amount) 
+        {
+            resourceText.text = "Amount: " + amount.ToString();
+        }
 
-public class Cafe
-{
-    public static void CustomersName()
-    {
-        Console.WriteLine("What is Customers Name");
-        string musteriAdi = Console.ReadLine();
-        Console.WriteLine($"Welcome to our cafe {musteriAdi}");
-    }
-
-    public DessertPrice()
-    {
-        double DessertPriceCalculation = 85.5;
-        Console.WriteLine($"How many portions do you want?");
-
-        string input = Console.ReadLine();
-
-        int miktar Convert.ToInt32(input);
-
-        double toplamBorc = DessertPrice * miktar;
-
-        Console.WriteLine($"Total Price: {toplamBorc} TL");
-
+        public void UpdateAll()
+        {
+            
+        }
     }
 
-    public ArcheologyDataSystem()
+    public class Cafe
     {
-        Console.WriteLine($"What is the findings name?");
-        string nameInput = Console.ReadLine();
+        public static void CustomersName()
+        {
+            Console.WriteLine("What is Customers Name");
+            string musteriAdi = Console.ReadLine();
+            Console.WriteLine($"Welcome to our cafe {musteriAdi}");
+        }
 
-        Console.WriteLine($"How Deep was the findings location?");
-        double deepInput = Convert.ToDouble(Console.ReadLine());
+        public DessertPrice()
+        {
+            double DessertPriceCalculation = 85.5;
+            Console.WriteLine($"How many portions do you want?");
 
-        Console.WriteLine($"Hoc many other findings around these area similiar to this finding?");
-        int amountInput = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
 
-        Console.WriteLine($"Succesfully Saved:{amountInput} amount of {nameInput}, located at {deepInput} meters deep ");
+            int miktar Convert.ToInt32(input);
 
+            double toplamBorc = DessertPrice * miktar;
+
+            Console.WriteLine($"Total Price: {toplamBorc} TL");
+
+        }
     }
 
     public MergeGameData()
+    
     {
-        Console.WriteLine($"Which product do you made?");
-        string ProductName = Console.ReadLine();
+            Console.WriteLine($"Which product do you made?");
+            string ProductName = Console.ReadLine();
 
-        Console.WriteLine($"How much does this product?");
-        double ProductPrice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"How much does this product?");
+            double ProductPrice = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine($"How many matches did you made?");
-        int MergeInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"How many matches did you made?");
+            int MergeInput = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine($"What was the total product coast for this product?");
-        double CoastInput = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"What was the total product coast for this product?");
+            double CoastInput = Convert.ToDouble(Console.ReadLine());
 
-        double TotalEarnings = ProductPrice * MergeInput - CoastInput;
+            double TotalEarnings = ProductPrice * MergeInput - CoastInput;
 
-        Console.WriteLine($"Congrats! you have earned {TotalEarnings} gold from {MergeInput} amount of {ProductName} ");
+            Console.WriteLine($"Congrats! you have earned {TotalEarnings} gold from {MergeInput} amount of {ProductName} ");
 
     }
 
-    public MuseumSystem()
-    {
-        Console.WriteLine($"Which school or group came?");
-        string NameInput = Console.ReadLine();
-
-        Console.WriteLine($"How many people in this group?");
-        int PeopleInput = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine($"How much ticket price per person?");
-        double PriceInput = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine($"How much donation did this group?");
-        double TotalDonation = Convert.ToDouble(Console.ReadLine());
-
-        double TotalTicketSale = PeopleInput * PriceInput;
-        double TotalGeneral = TotalTicketSale + TotalDonation;
-
-        Console.WriteLine($"MUSEUM REPORT");
-        Console.WriteLine($"GROUPS NAME {NameInput}");
-        Console.WriteLine($"TOTAL TICKET EARNING {TotalTicketSale} TL");
-        Console.WriteLine($"TOTAL EARNING WITH DONATIONS {TotalGeneral} TL");
-    }
-
-    public OxygenCheck()
-    {
-        Console.WriteLine($"Whats your Oxygen Percentage? 0-100 ");
-        int OxygenPercentage = Convert.ToInt32(Console.ReadLine());
-
-        if(OxygenPercentage < 20)
+        public MuseumSystem()
         {
-            Console.WriteLine($"Danger! Get out of the water!");
+            Console.WriteLine($"Which school or group came?");
+            string NameInput = Console.ReadLine();
+
+            Console.WriteLine($"How many people in this group?");
+            int PeopleInput = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"How much ticket price per person?");
+            double PriceInput = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"How much donation did this group?");
+            double TotalDonation = Convert.ToDouble(Console.ReadLine());
+
+            double TotalTicketSale = PeopleInput * PriceInput;
+            double TotalGeneral = TotalTicketSale + TotalDonation;
+
+            Console.WriteLine($"MUSEUM REPORT");
+            Console.WriteLine($"GROUPS NAME {NameInput}");
+            Console.WriteLine($"TOTAL TICKET EARNING {TotalTicketSale} TL");
+            Console.WriteLine($"TOTAL EARNING WITH DONATIONS {TotalGeneral} TL");
         }
+
+        public OxygenCheck()
+        {
+            Console.WriteLine($"Whats your Oxygen Percentage? 0-100 ");
+            int OxygenPercentage = Convert.ToInt32(Console.ReadLine());
+
+            if(OxygenPercentage < 20)
+            {
+                Console.WriteLine($"Danger! Get out of the water!");
+            }
+            
+            else if(OxygenPercentage < 50)
+            {
+                Console.WriteLine($"Oxygen is getting lower, get ready");
+            }
         
-        else if(OxygenPercentage < 50)
-        {
-            Console.WriteLine($"Oxygen is getting lower, get ready");
-        }
-       
-        else 
-        {
-        Console.WriteLine($"Oxygen Level is safe");
-        }
-
-    }
-
-    public GradeSystem()
-    {
-        Console.WriteLine($"Write the age of this art piece");
-        int PieceAge = Convert.ToInt32(Console.ReadLine());
-
-        if(PieceAge > 1000)
-        {
-            Console.WriteLine($"This piece is an epic historical art piece!");
-        }
-
-        else if(PieceAge > 500)
-        {
-            Console.WriteLine($"This is a very import art piece");
-        }
-
-        else
-        {
-            Console.WriteLine($"This art piece is very close to our era");
-        }
-    }
-
-    public void EntryCheck()
-    {
-        Console.WriteLine("How old are you?");
-        int GuestAge = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Are you a student?");
-        bool StudentCheck = Convert.ToBoolean(Console.ReadLine());
-
-        if(GuestAge < 18 || StudentCheck == true)
-        {
-            Console.WriteLine($"You have earned student discount by: 50 TL");
-        }
-
-        else
-        {
-            Console.WriteLine("You cannot earned student discount 100 TL");
-        }
-    }
-
-
-    public void EcoLock()
-    {
-        Console.WriteLine($"Enter your intelligence age 0-100");
-        int IntellegenceAge = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine($"Do you have enough key?");
-        bool KeyAmount = Convert.ToBoolean(Console.ReadLine());
-
-        Console.WriteLine($"What is your energy level? 0.0-1.0");
-        double EnergyLevel = Convert.ToDouble(Console.ReadLine());
-
-        if(IntellegenceAge > 70 && KeyAmount == true && EnergyLevel > 0.5 )
-        {
-            Console.WriteLine("Secret Area has unlocked! Welcome to the EcoMind!");
-        }
-
-        else
-        {
-            Console.WriteLine("You have to work more! Conditions not enough");
-        }
-
-    }
-
-    using System;
-    using System.Collections.Generic;
-
-    public class MindScore
-    {
-       public void ManageScore()
-       {
-        List<int> MindScores = new List<int>();
-
-        Console.WriteLine("Enter first players score: ");
-        int FirstScore = Convert.ToInt32(Console.ReadLine());
-        MindScores.Add(FirstScore);
-
-        Console.WriteLine("Enter second players score: ");
-        int SecondScore = Convert.ToInt32(Console.ReadLine());
-        MindScores.Add(SecondScore); 
-
-        if(MindScores[0] > MindScores[1])
-        {
-            Console.WriteLine($"First Player is better today!");
-        }
-
-        else
-        {
-            Console.WriteLine($"Second Player got the lead!");
-        }
-
-        Console.WriteLine($" In total there are {MindScore.Count} registiration");
-
-       } 
-    }
-
-    public class DiveLocation
-    {
-        public void ShowLocations()
-        {
-            string[] locations = new string[3];
-            locations[0] = "Bitez";
-            locations[1] = "Akvaryum";
-            locations[2] = "Orak";
-
-            Console.WriteLine($"{locations[2]}");
-        }
-
-    }
-
-    using System;
-    using System.Collections.Generic;
-    public class ShoppingList
-    {
-        public void Orders()
-        {
-
-        List<string> Orders = new List<string>();
-        Console.WriteLine("What is your order?");
-        Orders.Add(Console.ReadLine());
-
-        Console.WriteLine("What is your second order?");
-        Orders.Add(Console.ReadLine());
-
-        Console.WriteLine($"You have {Orders.Count} count orders");
+            else 
+            {
+            Console.WriteLine($"Oxygen Level is safe");
+            }
 
         }
-    }
 
-    public class Inventory
-    {
-        public void ShowInventory()
+        public GradeSystem()
         {
-            string[] storage = new string[2];
+            Console.WriteLine($"Write the age of this art piece");
+            int PieceAge = Convert.ToInt32(Console.ReadLine());
 
-            storage[0] = "Map";
-            storage[1] = "Compass";
+            if(PieceAge > 1000)
+            {
+                Console.WriteLine($"This piece is an epic historical art piece!");
+            }
 
-            storage[1] = "Lightning";
+            else if(PieceAge > 500)
+            {
+                Console.WriteLine($"This is a very import art piece");
+            }
 
-            Console.WriteLine($"{storage[1]}");
+            else
+            {
+                Console.WriteLine($"This art piece is very close to our era");
+            }
+        }
+
+        public void EntryCheck()
+        {
+            Console.WriteLine("How old are you?");
+            int GuestAge = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Are you a student?");
+            bool StudentCheck = Convert.ToBoolean(Console.ReadLine());
+
+            if(GuestAge < 18 || StudentCheck == true)
+            {
+                Console.WriteLine($"You have earned student discount by: 50 TL");
+            }
+
+            else
+            {
+                Console.WriteLine("You cannot earned student discount 100 TL");
+            }
+        }
+
+
+        public void EcoLock()
+        {
+            Console.WriteLine($"Enter your intelligence age 0-100");
+            int IntellegenceAge = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Do you have enough key?");
+            bool KeyAmount = Convert.ToBoolean(Console.ReadLine());
+
+            Console.WriteLine($"What is your energy level? 0.0-1.0");
+            double EnergyLevel = Convert.ToDouble(Console.ReadLine());
+
+            if(IntellegenceAge > 70 && KeyAmount == true && EnergyLevel > 0.5 )
+            {
+                Console.WriteLine("Secret Area has unlocked! Welcome to the EcoMind!");
+            }
+
+            else
+            {
+                Console.WriteLine("You have to work more! Conditions not enough");
+            }
 
         }
-    }
 
-        public void Numbers
+        using System;
+        using System.Collections.Generic;
+
+        public class MindScore
         {
-            Console.WriteLine(" Write First number: ");
-            int firstnumber = Convert.ToInt32(Console.ReadLine());
+        public void ManageScore()
+        {
+            List<int> MindScores = new List<int>();
 
-            
+            Console.WriteLine("Enter first players score: ");
+            int FirstScore = Convert.ToInt32(Console.ReadLine());
+            MindScores.Add(FirstScore);
 
+            Console.WriteLine("Enter second players score: ");
+            int SecondScore = Convert.ToInt32(Console.ReadLine());
+            MindScores.Add(SecondScore); 
 
-         
-            
-            
+            if(MindScores[0] > MindScores[1])
+            {
+                Console.WriteLine($"First Player is better today!");
+            }
+
+            else
+            {
+                Console.WriteLine($"Second Player got the lead!");
+            }
+
+            Console.WriteLine($" In total there are {MindScore.Count} registiration");
+
+        } 
         }
-   
 
+        public class DiveLocation
+        {
+            public void ShowLocations()
+            {
+                string[] locations = new string[3];
+                locations[0] = "Bitez";
+                locations[1] = "Akvaryum";
+                locations[2] = "Orak";
+
+                Console.WriteLine($"{locations[2]}");
+            }
+
+        }
+
+        using System;
+        using System.Collections.Generic;
+        public class ShoppingList
+        {
+            public void Orders()
+            {
+
+            List<string> Orders = new List<string>();
+            Console.WriteLine("What is your order?");
+            Orders.Add(Console.ReadLine());
+
+            Console.WriteLine("What is your second order?");
+            Orders.Add(Console.ReadLine());
+
+            Console.WriteLine($"You have {Orders.Count} count orders");
+
+            }
+        }
+
+        public class Inventory
+        {
+            public void ShowInventory()
+            {
+                string[] storage = new string[2];
+
+                storage[0] = "Map";
+                storage[1] = "Compass";
+
+                storage[1] = "Lightning";
+
+                Console.WriteLine($"{storage[1]}");
+
+            }
+        }
+
+    
 }
 
 
