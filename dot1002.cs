@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 
 public class Cafe
 {
@@ -135,6 +136,43 @@ public class Cafe
 
         Console.WriteLine($"Welcome to DOT1002 {name}");
     }
+
+    public void CalculateIncome(int customerCount)
+    {
+        int totalIncome = customerCount * 50;
+
+        if(totalIncome >= 500)
+        {
+            Console.WriteLine($"Amazing! your total earning is {totalIncome} TL");
+        }
+
+        else
+        {
+            Console.WriteLine($"Not a perfect day, your total earning is {totalIncome}");
+        }
+
+    }
+
+    public static int CalculateEarnings(int customerEarning)
+    {
+        int totalIncome = customerEarning * 50
+
+        if(totalIncome >= 500)
+        {
+            Console.WriteLine($"Amazing! your total earning is {totalIncome} TL");
+        }
+        
+        else
+        {
+            Console.WriteLine($"Not a perfect day, your total earning is {totalIncome} TL");
+        }
+
+        return totalIncome;
+    
+    }
+
+
+    
 
 
 
