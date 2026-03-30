@@ -242,7 +242,7 @@ public class Cafe
     }
 
     public class Program
-{
+    {
     public static void Main()
     {
         string geceninDurumu = CheckGeceMood(30); 
@@ -262,8 +262,33 @@ public class Cafe
             return "happy";
         }
     }
+    public static void BananaBread(int breadCount)
+    {
+        for(int i = 1; i <= breadCount; i++)
+        {
+            Console.WriteLine($"BananaBread {i} is going to the oven...");
+        }
+
+        Console.WriteLine("All banana breads are in the cooking stage");
+          
+    }
+
+    public static void ServeCoffee(int coffeeStock)
+    {
+      while(coffeeStock > 0)
+      {
+         Console.WriteLine($"Coffee service is closed! Current stock is: {coffeeStock}");
+         coffeeStock--;       
+      }     
+
+      Console.WriteLine(">Coffee is finished, brewing a new one...");
+    } 
+    }
+
+
+
 }
 
 
-}
+
 
