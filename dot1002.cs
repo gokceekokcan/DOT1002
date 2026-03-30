@@ -172,9 +172,97 @@ public class Cafe
     }
 
 
-    
+    public static int CalculateCakePrice(int sliceCount)
+    {
+        int calculatePrice = sliceCount * 40;
+
+        if(sliceCount >= 6 )
+        {
+            calculatePrice = calculatePrice - 30;
+            Console.WriteLine($"Price is {calculatePrice}");
+        }
+
+        else
+        {
+            Console.WriteLine($"Price is {calculatePrice}");
+        }
+
+        return calculatePrice;
+    }
+
+    public static int ProcessOrder(int basePrice, int tipAmount)
+    {
+        int totalSum = basePrice + tipAmount;
+
+        if(tipAmount == 0 )
+        {
+            Console.WriteLine($"No tips, sorry");
+            Console.WriteLine($"Total earning {totalSum}");
+        }
+
+        else
+        {
+            Console.WriteLine($"Your tip is {tipAmount}");
+            Console.WriteLine($"Total earning {totalSum}");
+        }
+
+        return totalSum;
+    }
+
+    public static int MergeDessers(int item1Level, int item2Level)
+    {
+        if(item1Level == item2Level)
+        {
+            Console.WriteLine($"Successfully merged!");
+            return item1Level + 1;
+        }
+
+        else
+        {
+            Console.WriteLine($"It cant be merged, different levels");
+            return 0;
+        }
 
 
+    }
+
+    public static string CheckGeceMood(int playTimeInMinutes)
+    {
+        if(playTimeInMinutes< 15)
+        {
+            Console.WriteLine($"Gece is unhappy, she is trying to enter the kitchen");
+            return "angry";
+        }
+
+        else
+        {
+            Console.WriteLine($"Gece is happy! she is sleeping");
+            return "happy";    
+        }
+    }
+
+    public class Program
+{
+    public static void Main()
+    {
+        string geceninDurumu = CheckGeceMood(30); 
+        Console.WriteLine($"Sistemden gelen durum raporu: {geceninDurumu}");
+    }
+
+    public static string CheckGeceMood(int playTimeInMinutes)
+    {
+        if(playTimeInMinutes < 15)
+        {
+            Console.WriteLine("Gece is unhappy, she is trying to enter the kitchen");
+            return "angry";
+        }
+        else
+        {
+            Console.WriteLine("Gece is happy! she is sleeping");
+            return "happy";
+        }
+    }
+}
 
 
 }
