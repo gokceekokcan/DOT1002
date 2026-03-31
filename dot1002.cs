@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 
 public class Cafe
 {
@@ -118,13 +120,13 @@ public class Cafe
 
         elseif(Operation == "multiply");
         {
-            int sum == Number1*Number2;
+            int sum = Number1*Number2;
             Console.WriteLine($"Answer is {sum} ({Number1}x{Number2}={sum})"); 
         }
 
         else
         {
-            int sum == Number1-Number2;
+            int sum = Number1-Number2;
             Console.WriteLine($"Answer is {Number1}-{Number2}={sum}");
         }
     }
@@ -155,7 +157,7 @@ public class Cafe
 
     public static int CalculateEarnings(int customerEarning)
     {
-        int totalIncome = customerEarning * 50
+        int totalIncome = customerEarning * 50;
 
         if(totalIncome >= 500)
         {
@@ -243,47 +245,128 @@ public class Cafe
 
     public class Program
     {
-    public static void Main()
-    {
-        string geceninDurumu = CheckGeceMood(30); 
-        Console.WriteLine($"Sistemden gelen durum raporu: {geceninDurumu}");
-    }
-
-    public static string CheckGeceMood(int playTimeInMinutes)
-    {
-        if(playTimeInMinutes < 15)
+        public static void Main()
         {
-            Console.WriteLine("Gece is unhappy, she is trying to enter the kitchen");
-            return "angry";
-        }
-        else
-        {
-            Console.WriteLine("Gece is happy! she is sleeping");
-            return "happy";
-        }
-    }
-    public static void BananaBread(int breadCount)
-    {
-        for(int i = 1; i <= breadCount; i++)
-        {
-            Console.WriteLine($"BananaBread {i} is going to the oven...");
+            string geceninDurumu = CheckGeceMood(30); 
+            Console.WriteLine($"Sistemden gelen durum raporu: {geceninDurumu}");
         }
 
-        Console.WriteLine("All banana breads are in the cooking stage");
-          
+        public static string CheckGeceMood(int playTimeInMinutes)
+        {
+            if(playTimeInMinutes < 15)
+            {
+                Console.WriteLine("Gece is unhappy, she is trying to enter the kitchen");
+                return "angry";
+            }
+            else
+            {
+                Console.WriteLine("Gece is happy! she is sleeping");
+                return "happy";
+            }
+        }
+        public static void BananaBread(int breadCount)
+        {
+            for(int i = 1; i <= breadCount; i++)
+            {
+                Console.WriteLine($"BananaBread {i} is going to the oven...");
+            }
+
+            Console.WriteLine("All banana breads are in the cooking stage");
+            
+        }
+
+        public static void ServeCoffee(int coffeeStock)
+        {
+        while(coffeeStock > 0)
+        {
+            Console.WriteLine($"Coffee service is closed! Current stock is: {coffeeStock}");
+            coffeeStock--;       
+        }     
+
+        Console.WriteLine(">Coffee is finished, brewing a new one...");
+        } 
+
+        public static void ShowMenu(string[] Desserts)
+        {
+           for (int i= 0; i< Desserts.Length; i++)
+           {
+              Console.WriteLine($"Dessert {i}: {Desserts[i]}");  
+           } 
+        }
+
+        public class Visitor
+        {
+            public string name;
+            public string gender;
+
+            public void IntroduceYourself()
+            {
+                Console.WriteLine($"Hi, I am {name} and I am a {gender}!");
+            }
+        }
+        public class VIPVisitor : Visitor
+        {
+          public int extraTip = 50;
+
+        }
+
+
+        public class Program
+        {
+            public static void Main()
+            {
+                VIPVisitor first = new VIPVisitor();
+                Visitor second = new Visitor();
+
+                first.name = "Gokce";
+                first.gender = "Girl";
+                second.name = "Gece";
+                second.gender = "girl cat";
+
+                first.IntroduceYourself();
+                second.IntroduceYourself();
+
+            }
+        }
+
+        public class EnergyLevel
+        {
+            private int energy = 50;
+
+            public void SpentEnergy(int amount)
+            {
+                if(energy >= amount)
+                {
+                    energy -= amount;
+                    Console.WriteLine($"New energy Level is {energy}");
+                }
+
+                else
+                {
+                    Console.WriteLine($"Not enough emergy! Your energy level is {energy}");
+                }
+            }
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
-    public static void ServeCoffee(int coffeeStock)
-    {
-      while(coffeeStock > 0)
-      {
-         Console.WriteLine($"Coffee service is closed! Current stock is: {coffeeStock}");
-         coffeeStock--;       
-      }     
 
-      Console.WriteLine(">Coffee is finished, brewing a new one...");
-    } 
-    }
+
+
+
 
 
 
