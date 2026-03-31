@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Net.Http.Headers;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
@@ -118,7 +119,7 @@ public class Cafe
             Console.WriteLine($"Answer is {sum} ({Number1}+{Number2}={sum})");
         }
 
-        elseif(Operation == "multiply");
+        else if(Operation == "multiply")
         {
             int sum = Number1*Number2;
             Console.WriteLine($"Answer is {sum} ({Number1}x{Number2}={sum})"); 
@@ -299,7 +300,7 @@ public class Cafe
             public string name;
             public string gender;
 
-            public void IntroduceYourself()
+            public virtual void IntroduceYourself()
             {
                 Console.WriteLine($"Hi, I am {name} and I am a {gender}!");
             }
@@ -310,13 +311,21 @@ public class Cafe
 
         }
 
+        public class CatVisitor : Visitor
+        {
+            public override void IntroduceYourself()
+            {
+                Console.WriteLine($"Meow! I am {name}");
+            }
+        }
+
 
         public class Program
         {
             public static void Main()
             {
                 VIPVisitor first = new VIPVisitor();
-                Visitor second = new Visitor();
+                CatVisitor second = new CatVisitor();
 
                 first.name = "Gokce";
                 first.gender = "Girl";
@@ -345,23 +354,106 @@ public class Cafe
                 {
                     Console.WriteLine($"Not enough emergy! Your energy level is {energy}");
                 }
+
             }
         }
 
+        public class FeedingMachine
+        {
+            public void SpecialFeeding(int amount)
+            {
+                Console.WriteLine($"{amount} food given to gece");
+            }
+        }
+
+        public class Program
+        {
+            public static void Main()
+            {
+                FeedingMachine machine = new FeedingMachine();
+
+                machine.SpecialFeeding(3);
+
+                machine.SpecialFeeding(5);
+            }
+        }
+
+        public class CoffeMachine
+        {
+            public void SpecialCoffee(string customerName, string cofffeSpecialty)
+            {
+                Console.WriteLine($"Order is ready {customerName}, take your {cofffeSpecialty}");
+            }
+
+            public static void Main()
+            {
+                CoffeMachine order = new CoffeMachine();
+                order.SpecialCoffee("Gokce", "caramel machiato");
+                
+            }
+        }
+
+        public static void GreetUser(string name)
+        {
+            Console.WriteLine($"Welcome to DOT1002, {name}!");
+        }
+
+        public static void Main()
+        {
+            GreetUser("Freeman");
+        }
+
+        public static double CalculateArea(double radius , double pivalue= 3.14)
+        {
+            return pivalue * radius * radius;   
+        }
+
+        public static void Main()
+        {
+            double area = CalculateArea(5);
+            Console.WriteLine($"Area: {area}");
+        }
+
+        public static bool IsValidPassword(string password)
+        {
+            if(password.Length >= 6)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void Main()
+        {
+            bool result = IsValidPassword("123456");
+            Console.WriteLine($"Is Password Valid? {result}");
+        }
+
+        public static bool MergeDeserts(int playerLevel, int LevelNeeded)
+        {
+            if(playerLevel >= LevelNeeded)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void Main()
+        {
+            bool result = MergeDeserts(5, 8);
+            Console.WriteLine($"Operation is {result}");
+        }
+
+
+
+}
         
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 
 
 
